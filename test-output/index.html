@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Tests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Tests" title="testcases.CredifyTestCase" class="method navigator-link" hash-for-method="verifyOfferOnLogin">verifyOfferOnLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Tests" title="testcases.VerifyOfferOnLogin" class="method navigator-link" hash-for-method="verifyOfferOnLogin">verifyOfferOnLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Tests -->
@@ -120,7 +120,7 @@
           <div class="suite-Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testcases.CredifyTestCase</span>
+              <span class="class-name">testcases.VerifyOfferOnLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -144,7 +144,7 @@
 &lt;suite name=&quot;Tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;5&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;FunctionalTest&quot; verbose=&quot;5&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.CredifyTestCase&quot;/&gt;
+      &lt;class name=&quot;testcases.VerifyOfferOnLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- FunctionalTest --&gt;
 &lt;/suite&gt; &lt;!-- Tests --&gt;
@@ -187,13 +187,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyOfferOnLogin')
-data.setCell(0, 2, 'testcases.CredifyTestCase')
-data.setCell(0, 3, 32156);
+data.setCell(0, 2, 'testcases.VerifyOfferOnLogin')
+data.setCell(0, 3, 55078);
 window.suiteTableData['Tests']= { tableData: data, tableDiv: 'times-div-Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Tests">
               </div> <!-- times-div-Tests -->
             </div> <!-- times-div -->
@@ -219,15 +219,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.CredifyTestCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.VerifyOfferOnLogin</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyOfferOnLogin</span>
-                <span class="method-start">4924 ms</span>
+                <span class="method-start">3061 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">58157 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

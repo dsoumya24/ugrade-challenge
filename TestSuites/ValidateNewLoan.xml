@@ -3,7 +3,7 @@
 <suite name="Tests" verbose="5">
     <test name="FunctionalTest">
          <classes>
-             <class name="testcases.CredifyTestCase"/>
+             <class name="testcases.VerifyOfferOnLogin"/>
           </classes>
      </test> <!-- Test -->
 </suite> <!-- Suite -->

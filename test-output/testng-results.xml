@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-15T13:21:52 EST" name="Tests" finished-at="2020-12-15T13:22:29 EST" duration-ms="37145">
+  <suite started-at="2020-12-15T14:58:45 EST" name="Tests" finished-at="2020-12-15T14:59:43 EST" duration-ms="58487">
     <groups>
     </groups>
-    <test started-at="2020-12-15T13:21:52 EST" name="FunctionalTest" finished-at="2020-12-15T13:22:29 EST" duration-ms="37145">
-      <class name="testcases.CredifyTestCase">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.CredifyTestCase@dd0c991]" started-at="2020-12-15T13:21:52 EST" name="setUp" finished-at="2020-12-15T13:21:57 EST" duration-ms="4922" status="PASS">
+    <test started-at="2020-12-15T14:58:45 EST" name="FunctionalTest" finished-at="2020-12-15T14:59:43 EST" duration-ms="58487">
+      <class name="testcases.VerifyOfferOnLogin">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.VerifyOfferOnLogin@36d585c]" started-at="2020-12-15T14:58:45 EST" name="setUp" finished-at="2020-12-15T14:58:48 EST" duration-ms="3060" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyOfferOnLogin()[pri:0, instance:testcases.CredifyTestCase@dd0c991]" started-at="2020-12-15T13:21:57 EST" name="verifyOfferOnLogin" finished-at="2020-12-15T13:22:29 EST" duration-ms="32156" status="PASS">
+        <test-method signature="verifyOfferOnLogin()[pri:0, instance:testcases.VerifyOfferOnLogin@36d585c]" started-at="2020-12-15T14:58:48 EST" name="verifyOfferOnLogin" finished-at="2020-12-15T14:59:43 EST" duration-ms="55078" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOfferOnLogin -->
-      </class> <!-- testcases.CredifyTestCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.VerifyOfferOnLogin@36d585c]" started-at="2020-12-15T14:59:43 EST" name="tearDown" finished-at="2020-12-15T14:59:43 EST" duration-ms="291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.VerifyOfferOnLogin -->
     </test> <!-- FunctionalTest -->
   </suite> <!-- Tests -->
 </testng-results>

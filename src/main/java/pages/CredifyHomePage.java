@@ -48,7 +48,7 @@ public class CredifyHomePage  extends TestBase{
 		public void selectLoanPurpose(String purposeValue)
 		{
 			Select purpose= new Select(loanPurpose);
-			purpose.selectByValue(purposeValue);
+			purpose.selectByVisibleText(purposeValue);
 			
 		}
 		
