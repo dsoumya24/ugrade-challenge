@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -83,7 +84,7 @@ public class VerifyOfferOnLogin extends TestBase{
 					createAccPage.enterEmailAddress(emailId);
 					String password=generateRandomPassword();
 					createAccPage.enterPassword(password);
-					System.out.println("password "+password);
+					//System.out.println("password "+password);
 					createAccPage.validateIfValidPassword();
 					createAccPage.checkTermsCheckBox();
 					createAccPage.clickContinueOnCreateAccount();
@@ -113,11 +114,7 @@ public class VerifyOfferOnLogin extends TestBase{
 					valuesOnLogin.put("term",offersPageAfterLogin.fetchTerm());
 					valuesOnLogin.put("interestRate",offersPageAfterLogin.fetchInterestRate());
 					valuesOnLogin.put("apr",offersPageAfterLogin.fetchApr());
-					if(valuesOnOfferRequest.equals(valuesOnLogin))
-					{
-						System.out.println("Matching values");
-					}
-			
+					Assert.assertEquals(valuesOnLogin, valuesOnOfferRequest);
 					offersPageAfterLogin.signout();
 					
 			}

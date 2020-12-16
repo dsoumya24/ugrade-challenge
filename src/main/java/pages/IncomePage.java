@@ -37,11 +37,9 @@ public class IncomePage  extends TestBase{
 	//method to validate if Income page appears
 	public void validateIfIncomeInfoPageIsLoaded()
 	{
-		if(incomeHeader.isDisplayed())
-			System.out.println("Income Page loaded");
-		else
-			System.out.println("Income Page is not loaded");
-				
+		if(!incomeHeader.isDisplayed())
+			System.out.println("Income Page NOT loaded");
+		
 	}
 	
 	//method to enter annual income

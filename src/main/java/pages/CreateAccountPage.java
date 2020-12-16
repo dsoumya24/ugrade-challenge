@@ -70,10 +70,7 @@ public class CreateAccountPage  extends TestBase{
 			{
 				System.out.println("Please enter a valid password");
 			}
-			else
-			{
-				System.out.println("valid password check mark displayed");
-			}
+		
 			}
 			catch(NoSuchElementException e)
 			{
