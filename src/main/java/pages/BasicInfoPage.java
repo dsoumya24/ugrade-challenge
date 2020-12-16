@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -117,11 +118,18 @@ public class BasicInfoPage extends TestBase{
 	//Validate if any invalid data entered inthe textboxes or data is not entered in the textboxes
 			public void validateInputText()
 			{
-				/*if(requiredField.isDisplayed() || dobNot18.isDisplayed() 
+				try
+				{
+				if(requiredField.isDisplayed() || dobNot18.isDisplayed() 
 						|| invalidState.isDisplayed() || invalidZip.isDisplayed()
 						|| inValidDOB.isDisplayed())
 				{
 					System.out.println("Please Corect the input data and submit again");
-				}*/
+				}
+				}
+				catch(NoSuchElementException e)
+				{
+					System.out.println("All mandatory fields filled");
+				}
 			}
 }

@@ -56,6 +56,7 @@ public class VerifyOfferOnLogin extends TestBase{
 					credifyHomePage.enterLoanAmount(pii[0]);
 					credifyHomePage.selectLoanPurpose(pii[1]);
 					credifyHomePage.clickOnCheckRate();
+					credifyHomePage.validateIfRequiredDataEntered();
 					
 					BasicInfoPage basicPage = new BasicInfoPage();
 					basicPage.enterFirstName(randomName());
@@ -65,16 +66,15 @@ public class VerifyOfferOnLogin extends TestBase{
 					basicPage.enterState(pii[4]);
 					basicPage.enterZipCode(pii[5]);
 					basicPage.enterDOB(randomDateBetweenDates());
-					
 					basicPage.clickContinue();
 					basicPage.validateInputText();
 					
 					IncomePage incPage = new IncomePage();
 					incPage.validateIfIncomeInfoPageIsLoaded();
-					incPage.enterAnnualIncome("120050");
-					incPage.enterAdditionalIncome("5500");
+					incPage.enterAnnualIncome(String.valueOf(generateRandomNumInRange(200000,120001)));
+					incPage.enterAdditionalIncome(String.valueOf(generateRandomNumInRange(10000,5001)));
 					incPage.clickContinueOnIncomePage();
-					//incPage.validateIfDataEntered();
+					incPage.validateIfDataEntered();
 					
 					CreateAccountPage createAccPage=new CreateAccountPage();
 					Random rand = new Random(); 
@@ -142,7 +142,6 @@ public class VerifyOfferOnLogin extends TestBase{
 			final String randomName=randomString(textTorandomise,12);
 		    return randomName;
 		}
-		
 	public String randomDateBetweenDates()
 	{
 		Random random = new Random();
@@ -164,7 +163,6 @@ public class VerifyOfferOnLogin extends TestBase{
         final String numberRandom=randomString(number,6);
         return upperCaseRandom+lowerCaseRandom+numberRandom;
     }
-	
 	public String randomString(String textToRaondomise,int lenOfRandomText)
 	{
 		SecureRandom random = new SecureRandom();
@@ -176,6 +174,9 @@ public class VerifyOfferOnLogin extends TestBase{
         }
         return SB.toString();
 	}
-  
+	public int generateRandomNumInRange(int fromInt,int toInt)
+	{	
+		    return (int) ((Math.random() * (toInt - fromInt)) + fromInt);		
+	}
 	
 }

@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -63,10 +64,19 @@ public class IncomePage  extends TestBase{
 
 	public void validateIfDataEntered()
 	{
-		if(requiredField.isDisplayed())
-		{
-			System.out.println("Enter data in income screen");
-		}
+		try
+        {
+			if(requiredField.isDisplayed())
+			{
+				System.out.println("Enter data in income screen");
+			}
+        }
+        catch (NoSuchElementException e)
+        {
+        	System.out.println("All mandatory fields filled in");
+        }
+      
+		
 	}
 	
 }

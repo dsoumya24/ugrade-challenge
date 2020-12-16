@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -18,6 +19,9 @@ public class CredifyHomePage  extends TestBase{
 			
 			@FindBy(css="button.gtkhEk")
 			WebElement checkRate;
+			
+			@FindBy(xpath="//div[contains(text(),\"This field is required\")]")
+			WebElement requiredElement;
 			
 			public String url="https://www.credify.tech/phone/nonDMFunnel";	
 	public CredifyHomePage() {
@@ -57,4 +61,20 @@ public class CredifyHomePage  extends TestBase{
 		{
 			checkRate.submit();
 		}
+		
+		public void validateIfRequiredDataEntered()
+		{
+			try 
+			{
+				if(requiredElement.isDisplayed())
+				{
+					System.out.println("Enter data in all the mandatory required fields ");
+				}
+			}
+			catch(NoSuchElementException e)
+			{
+				
+			}
+		}
+		
 }

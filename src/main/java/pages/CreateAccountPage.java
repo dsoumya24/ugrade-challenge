@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -63,6 +64,8 @@ public class CreateAccountPage  extends TestBase{
 		//method to validate if valid password check mark appears after entering password
 		public void validateIfValidPassword()
 		{
+			try
+			{
 			if(!validPasswordCheck.isDisplayed())
 			{
 				System.out.println("Please enter a valid password");
@@ -70,6 +73,11 @@ public class CreateAccountPage  extends TestBase{
 			else
 			{
 				System.out.println("valid password check mark displayed");
+			}
+			}
+			catch(NoSuchElementException e)
+			{
+				
 			}
 				
 		}
